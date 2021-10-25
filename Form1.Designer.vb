@@ -253,11 +253,13 @@ Partial Class Form1
         '
         'BtCalcDisplay
         '
+        Me.BtCalcDisplay.Enabled = False
         Me.BtCalcDisplay.Location = New System.Drawing.Point(12, 12)
         Me.BtCalcDisplay.Name = "BtCalcDisplay"
         Me.BtCalcDisplay.Size = New System.Drawing.Size(314, 114)
         Me.BtCalcDisplay.TabIndex = 2
-        Me.BtCalcDisplay.Text = "Button1"
+        Me.BtCalcDisplay.TabStop = False
+        Me.BtCalcDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtCalcDisplay.UseVisualStyleBackColor = True
         '
         'Form1

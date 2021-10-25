@@ -72,8 +72,7 @@ Public Class Form1
     End Sub
 
     Private Sub BtCalcEqual_Click(sender As Object, e As EventArgs) Handles BtCalcEqual.Click
-
+        BtCalcDisplay.Text = "Algo"
     End Sub
-
 
 End Class
