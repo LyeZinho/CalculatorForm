@@ -259,7 +259,7 @@ Partial Class Form1
         Me.BtCalcDisplay.Size = New System.Drawing.Size(314, 114)
         Me.BtCalcDisplay.TabIndex = 2
         Me.BtCalcDisplay.TabStop = False
-        Me.BtCalcDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtCalcDisplay.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.BtCalcDisplay.UseVisualStyleBackColor = True
         '
         'Form1
@@ -271,8 +271,9 @@ Partial Class Form1
         Me.Controls.Add(Me.BtCalcDisplay)
         Me.Controls.Add(Me.GbNumericPad)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "CalculatorForm"
         Me.GbNumericPad.ResumeLayout(False)
         Me.GbNumericPad.PerformLayout()
         Me.ResumeLayout(False)
