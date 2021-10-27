@@ -1,6 +1,6 @@
 ﻿Imports NCalc
 Module Module1
-
+    'ALGO
     Public Function calc(_imput As String) As Integer
         Dim expression = New Expression(_imput, EvaluateOptions.IgnoreCase)
         Dim result = expression.Evaluate()
