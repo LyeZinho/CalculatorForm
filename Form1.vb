@@ -118,7 +118,7 @@ Public Class Form1
 
     End Sub
 
-    'Cientif
+    '´To do concluir a parte cientifica
     Private Sub BtSQRT_Click(sender As Object, e As EventArgs) Handles BtSQRT.Click
         calc = calc + ""
         BtCalcDisplay.Text = Display(calc, DefaultResultDisplay)
