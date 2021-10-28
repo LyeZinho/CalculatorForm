@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GbNumericPad = New System.Windows.Forms.GroupBox()
+        Me.BtExpand = New System.Windows.Forms.Button()
         Me.BtFuncExit = New System.Windows.Forms.Button()
         Me.BtFuncClear = New System.Windows.Forms.Button()
         Me.BtCalcPlus = New System.Windows.Forms.Button()
@@ -42,11 +43,16 @@ Partial Class Form1
         Me.BtNumeric2 = New System.Windows.Forms.Button()
         Me.BtNumeric1 = New System.Windows.Forms.Button()
         Me.BtCalcDisplay = New System.Windows.Forms.Button()
+        Me.GbExpand = New System.Windows.Forms.GroupBox()
+        Me.BtPI = New System.Windows.Forms.Button()
+        Me.BtSQRT = New System.Windows.Forms.Button()
         Me.GbNumericPad.SuspendLayout()
+        Me.GbExpand.SuspendLayout()
         Me.SuspendLayout()
         '
         'GbNumericPad
         '
+        Me.GbNumericPad.Controls.Add(Me.BtExpand)
         Me.GbNumericPad.Controls.Add(Me.BtFuncExit)
         Me.GbNumericPad.Controls.Add(Me.BtFuncClear)
         Me.GbNumericPad.Controls.Add(Me.BtCalcPlus)
@@ -65,16 +71,27 @@ Partial Class Form1
         Me.GbNumericPad.Controls.Add(Me.BtNumeric3)
         Me.GbNumericPad.Controls.Add(Me.BtNumeric2)
         Me.GbNumericPad.Controls.Add(Me.BtNumeric1)
-        Me.GbNumericPad.Location = New System.Drawing.Point(12, 132)
+        Me.GbNumericPad.Location = New System.Drawing.Point(12, 128)
         Me.GbNumericPad.Name = "GbNumericPad"
         Me.GbNumericPad.Size = New System.Drawing.Size(318, 321)
         Me.GbNumericPad.TabIndex = 1
         Me.GbNumericPad.TabStop = False
         '
+        'BtExpand
+        '
+        Me.BtExpand.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BtExpand.Location = New System.Drawing.Point(245, 292)
+        Me.BtExpand.Name = "BtExpand"
+        Me.BtExpand.Size = New System.Drawing.Size(67, 25)
+        Me.BtExpand.TabIndex = 18
+        Me.BtExpand.Text = "»"
+        Me.BtExpand.UseVisualStyleBackColor = True
+        Me.BtExpand.Visible = False
+        '
         'BtFuncExit
         '
         Me.BtFuncExit.AutoSize = True
-        Me.BtFuncExit.Location = New System.Drawing.Point(157, 265)
+        Me.BtFuncExit.Location = New System.Drawing.Point(157, 240)
         Me.BtFuncExit.Name = "BtFuncExit"
         Me.BtFuncExit.Size = New System.Drawing.Size(155, 51)
         Me.BtFuncExit.TabIndex = 17
@@ -84,7 +101,7 @@ Partial Class Form1
         'BtFuncClear
         '
         Me.BtFuncClear.AutoSize = True
-        Me.BtFuncClear.Location = New System.Drawing.Point(11, 265)
+        Me.BtFuncClear.Location = New System.Drawing.Point(11, 240)
         Me.BtFuncClear.Name = "BtFuncClear"
         Me.BtFuncClear.Size = New System.Drawing.Size(140, 51)
         Me.BtFuncClear.TabIndex = 16
@@ -94,7 +111,7 @@ Partial Class Form1
         'BtCalcPlus
         '
         Me.BtCalcPlus.AutoSize = True
-        Me.BtCalcPlus.Location = New System.Drawing.Point(245, 195)
+        Me.BtCalcPlus.Location = New System.Drawing.Point(245, 183)
         Me.BtCalcPlus.Name = "BtCalcPlus"
         Me.BtCalcPlus.Size = New System.Drawing.Size(67, 51)
         Me.BtCalcPlus.TabIndex = 15
@@ -104,7 +121,7 @@ Partial Class Form1
         'BtCalcMinus
         '
         Me.BtCalcMinus.AutoSize = True
-        Me.BtCalcMinus.Location = New System.Drawing.Point(245, 138)
+        Me.BtCalcMinus.Location = New System.Drawing.Point(245, 126)
         Me.BtCalcMinus.Name = "BtCalcMinus"
         Me.BtCalcMinus.Size = New System.Drawing.Size(67, 51)
         Me.BtCalcMinus.TabIndex = 14
@@ -114,7 +131,7 @@ Partial Class Form1
         'BtCalcAsterisk
         '
         Me.BtCalcAsterisk.AutoSize = True
-        Me.BtCalcAsterisk.Location = New System.Drawing.Point(245, 81)
+        Me.BtCalcAsterisk.Location = New System.Drawing.Point(245, 69)
         Me.BtCalcAsterisk.Name = "BtCalcAsterisk"
         Me.BtCalcAsterisk.Size = New System.Drawing.Size(67, 51)
         Me.BtCalcAsterisk.TabIndex = 13
@@ -124,7 +141,7 @@ Partial Class Form1
         'BtCalcSlash
         '
         Me.BtCalcSlash.AutoSize = True
-        Me.BtCalcSlash.Location = New System.Drawing.Point(245, 24)
+        Me.BtCalcSlash.Location = New System.Drawing.Point(245, 12)
         Me.BtCalcSlash.Name = "BtCalcSlash"
         Me.BtCalcSlash.Size = New System.Drawing.Size(67, 51)
         Me.BtCalcSlash.TabIndex = 12
@@ -134,7 +151,7 @@ Partial Class Form1
         'BtCalcEqual
         '
         Me.BtCalcEqual.AutoSize = True
-        Me.BtCalcEqual.Location = New System.Drawing.Point(157, 195)
+        Me.BtCalcEqual.Location = New System.Drawing.Point(157, 183)
         Me.BtCalcEqual.Name = "BtCalcEqual"
         Me.BtCalcEqual.Size = New System.Drawing.Size(67, 51)
         Me.BtCalcEqual.TabIndex = 11
@@ -144,7 +161,7 @@ Partial Class Form1
         'BtCalcInterpunct
         '
         Me.BtCalcInterpunct.AutoSize = True
-        Me.BtCalcInterpunct.Location = New System.Drawing.Point(84, 195)
+        Me.BtCalcInterpunct.Location = New System.Drawing.Point(84, 183)
         Me.BtCalcInterpunct.Name = "BtCalcInterpunct"
         Me.BtCalcInterpunct.Size = New System.Drawing.Size(67, 51)
         Me.BtCalcInterpunct.TabIndex = 10
@@ -154,7 +171,7 @@ Partial Class Form1
         'BtNumeric0
         '
         Me.BtNumeric0.AutoSize = True
-        Me.BtNumeric0.Location = New System.Drawing.Point(11, 195)
+        Me.BtNumeric0.Location = New System.Drawing.Point(11, 183)
         Me.BtNumeric0.Name = "BtNumeric0"
         Me.BtNumeric0.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric0.TabIndex = 9
@@ -164,7 +181,7 @@ Partial Class Form1
         'BtNumeric9
         '
         Me.BtNumeric9.AutoSize = True
-        Me.BtNumeric9.Location = New System.Drawing.Point(157, 24)
+        Me.BtNumeric9.Location = New System.Drawing.Point(157, 12)
         Me.BtNumeric9.Name = "BtNumeric9"
         Me.BtNumeric9.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric9.TabIndex = 8
@@ -174,7 +191,7 @@ Partial Class Form1
         'BtNumeric8
         '
         Me.BtNumeric8.AutoSize = True
-        Me.BtNumeric8.Location = New System.Drawing.Point(84, 24)
+        Me.BtNumeric8.Location = New System.Drawing.Point(84, 12)
         Me.BtNumeric8.Name = "BtNumeric8"
         Me.BtNumeric8.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric8.TabIndex = 7
@@ -184,7 +201,7 @@ Partial Class Form1
         'BtNumeric7
         '
         Me.BtNumeric7.AutoSize = True
-        Me.BtNumeric7.Location = New System.Drawing.Point(11, 24)
+        Me.BtNumeric7.Location = New System.Drawing.Point(11, 12)
         Me.BtNumeric7.Name = "BtNumeric7"
         Me.BtNumeric7.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric7.TabIndex = 6
@@ -194,7 +211,7 @@ Partial Class Form1
         'BtNumeric6
         '
         Me.BtNumeric6.AutoSize = True
-        Me.BtNumeric6.Location = New System.Drawing.Point(157, 81)
+        Me.BtNumeric6.Location = New System.Drawing.Point(157, 69)
         Me.BtNumeric6.Name = "BtNumeric6"
         Me.BtNumeric6.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric6.TabIndex = 5
@@ -204,7 +221,7 @@ Partial Class Form1
         'BtNumeric5
         '
         Me.BtNumeric5.AutoSize = True
-        Me.BtNumeric5.Location = New System.Drawing.Point(84, 81)
+        Me.BtNumeric5.Location = New System.Drawing.Point(84, 69)
         Me.BtNumeric5.Name = "BtNumeric5"
         Me.BtNumeric5.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric5.TabIndex = 4
@@ -214,7 +231,7 @@ Partial Class Form1
         'BtNumeric4
         '
         Me.BtNumeric4.AutoSize = True
-        Me.BtNumeric4.Location = New System.Drawing.Point(11, 81)
+        Me.BtNumeric4.Location = New System.Drawing.Point(11, 69)
         Me.BtNumeric4.Name = "BtNumeric4"
         Me.BtNumeric4.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric4.TabIndex = 3
@@ -224,7 +241,7 @@ Partial Class Form1
         'BtNumeric3
         '
         Me.BtNumeric3.AutoSize = True
-        Me.BtNumeric3.Location = New System.Drawing.Point(157, 138)
+        Me.BtNumeric3.Location = New System.Drawing.Point(157, 126)
         Me.BtNumeric3.Name = "BtNumeric3"
         Me.BtNumeric3.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric3.TabIndex = 2
@@ -234,7 +251,7 @@ Partial Class Form1
         'BtNumeric2
         '
         Me.BtNumeric2.AutoSize = True
-        Me.BtNumeric2.Location = New System.Drawing.Point(84, 138)
+        Me.BtNumeric2.Location = New System.Drawing.Point(84, 126)
         Me.BtNumeric2.Name = "BtNumeric2"
         Me.BtNumeric2.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric2.TabIndex = 1
@@ -244,7 +261,7 @@ Partial Class Form1
         'BtNumeric1
         '
         Me.BtNumeric1.AutoSize = True
-        Me.BtNumeric1.Location = New System.Drawing.Point(11, 138)
+        Me.BtNumeric1.Location = New System.Drawing.Point(11, 126)
         Me.BtNumeric1.Name = "BtNumeric1"
         Me.BtNumeric1.Size = New System.Drawing.Size(67, 51)
         Me.BtNumeric1.TabIndex = 0
@@ -254,6 +271,7 @@ Partial Class Form1
         'BtCalcDisplay
         '
         Me.BtCalcDisplay.Enabled = False
+        Me.BtCalcDisplay.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.BtCalcDisplay.Location = New System.Drawing.Point(12, 12)
         Me.BtCalcDisplay.Name = "BtCalcDisplay"
         Me.BtCalcDisplay.Size = New System.Drawing.Size(314, 114)
@@ -262,12 +280,41 @@ Partial Class Form1
         Me.BtCalcDisplay.TextAlign = System.Drawing.ContentAlignment.TopRight
         Me.BtCalcDisplay.UseVisualStyleBackColor = True
         '
+        'GbExpand
+        '
+        Me.GbExpand.Controls.Add(Me.BtPI)
+        Me.GbExpand.Controls.Add(Me.BtSQRT)
+        Me.GbExpand.Location = New System.Drawing.Point(342, 13)
+        Me.GbExpand.Name = "GbExpand"
+        Me.GbExpand.Size = New System.Drawing.Size(235, 432)
+        Me.GbExpand.TabIndex = 3
+        Me.GbExpand.TabStop = False
+        '
+        'BtPI
+        '
+        Me.BtPI.Location = New System.Drawing.Point(91, 22)
+        Me.BtPI.Name = "BtPI"
+        Me.BtPI.Size = New System.Drawing.Size(79, 46)
+        Me.BtPI.TabIndex = 1
+        Me.BtPI.Text = "π"
+        Me.BtPI.UseVisualStyleBackColor = True
+        '
+        'BtSQRT
+        '
+        Me.BtSQRT.Location = New System.Drawing.Point(6, 22)
+        Me.BtSQRT.Name = "BtSQRT"
+        Me.BtSQRT.Size = New System.Drawing.Size(79, 46)
+        Me.BtSQRT.TabIndex = 0
+        Me.BtSQRT.Text = "x²"
+        Me.BtSQRT.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(338, 456)
+        Me.ClientSize = New System.Drawing.Size(589, 463)
+        Me.Controls.Add(Me.GbExpand)
         Me.Controls.Add(Me.BtCalcDisplay)
         Me.Controls.Add(Me.GbNumericPad)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -276,6 +323,7 @@ Partial Class Form1
         Me.Text = "CalculatorForm"
         Me.GbNumericPad.ResumeLayout(False)
         Me.GbNumericPad.PerformLayout()
+        Me.GbExpand.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -299,4 +347,8 @@ Partial Class Form1
     Friend WithEvents BtNumeric9 As Button
     Friend WithEvents BtNumeric8 As Button
     Friend WithEvents BtCalcDisplay As Button
+    Friend WithEvents BtExpand As Button
+    Friend WithEvents GbExpand As GroupBox
+    Friend WithEvents BtPI As Button
+    Friend WithEvents BtSQRT As Button
 End Class

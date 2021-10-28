@@ -4,6 +4,23 @@ Public Class Form1
     Dim calc As String
     Dim DefaultResultDisplay As String = ""
     Public InvalidCalc As Boolean
+    Dim Expanded As Boolean
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Width = 360
+        Expanded = False
+    End Sub
+
+    Private Sub BtExpand_Click(sender As Object, e As EventArgs) Handles BtExpand.Click
+        If Expanded = False Then
+            Me.Width = 609
+            Expanded = True
+        ElseIf Expanded = True Then
+            Me.Width = 360
+            Expanded = False
+        End If
+
+    End Sub
 
     Private Sub BtNumeric0_Click(sender As Object, e As EventArgs) Handles BtNumeric0.Click
         calc = calc + "0"
@@ -92,10 +109,18 @@ Public Class Form1
 
     Private Sub BtCalcEqual_Click(sender As Object, e As EventArgs) Handles BtCalcEqual.Click
         Dim result As String = FuncsParaCalc.Calc(calc)
-        If result = "0" Then
+
+        If result = "123456" And InvalidCalc = True Then
             BtCalcDisplay.Text = Display(calc, "Expressão invalida")
+        Else
+            BtCalcDisplay.Text = Display(calc, result.ToString)
         End If
-        BtCalcDisplay.Text = Display(calc, result.ToString)
+
     End Sub
 
+    'Cientif
+    Private Sub BtSQRT_Click(sender As Object, e As EventArgs) Handles BtSQRT.Click
+        calc = calc + ""
+        BtCalcDisplay.Text = Display(calc, DefaultResultDisplay)
+    End Sub
 End Class
